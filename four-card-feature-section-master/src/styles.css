@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+:root{
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+    --VeryDarkBlue: hsl(234, 12%, 34%);
+    --GrayishBlue: hsl(229, 6%, 66%);
+    --VeryLightGray: hsl(0, 0%, 98%);
+    --bg: #fff;
+    --color: #000;
+
+    /* ejemplo */
+    --primary-100:#0085ff;
+    --primary-200:#69b4ff;
+    --primary-300:#e0ffff;
+    --accent-100:#006fff;
+    --accent-200:#e1ffff;
+    --text-100:#FFFFFF;
+    --text-200:#9e9e9e;
+    --bg-100:#1E1E1E;
+    --bg-200:#2d2d2d;
+    --bg-300:#454545;
+      
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: var(--bg-100);
+    color: var(--text-100);
+
+    transition:background-color 0.5s,color 0.5s  ;
+}
+
+body.darkmode {
+    background-color: var(--bg-100);
+    color: var(--text-100);
+
+    /* ejemplo */
+    --primary-100:#6B5B95;
+    --primary-200:#4B4068;
+    --primary-300:#E1DDEB;
+    --accent-100:#908fe5;
+    --accent-200:#BE5800;
+    --text-100:#333333;
+    --text-200:#424242;
+    --bg-100:#E6E6FA;
+    --bg-200:#D2D2F6;
+    --bg-300:#FFFFFF;
+      
+}
+
+.container{
+    padding: 3rem 1rem;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+}
+
+
+.technology{
+    max-width: 1024px;
+    display: grid;
+    gap: 1rem;
+}
+
+.technology__text{
+    display: grid;
+    gap: 1rem;
+
+    text-align: center;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.technology__cards{
+    display: grid;
+    gap: 1rem;
+}
+
+.card{
+    background-color: var(--accent-100);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0px 10px 10px #00000020 ;
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    height: 5px;
+    left: 0;
+    top: 0;
+    position: absolute;
+    content: "";
+    width: 100% ;
+}
+
+.card:nth-child(1)::before{
+    background-color:var(--Cyan) ;
+}
+.card:nth-child(2)::before{
+    background-color: var(--Red) ;
+}
+.card:nth-child(3)::before{
+    background-color: var(--Orange);
+}
+.card:nth-child(4)::before{
+    background-color: var(--Blue);
+}
+
+.card__img{
+    
+    align-self: flex-end;
+
+    
+}
+
+@media (min-width: 700px) {
+    .technology__cards{
+        display: grid;
+        grid-template-areas: ". item2 ."
+        "item1 item2 item4"
+        "item1 item3 item4"
+        ". item3 .";
+    }
+
+    .card:nth-child(1){
+        grid-area: item1 ;
+    }
+    .card:nth-child(2){
+        grid-area: item2 ;
+    }
+    .card:nth-child(3){
+        grid-area: item3;
+    }
+    .card:nth-child(4){
+        grid-area: item4;
+    }
+}
+

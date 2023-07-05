@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+
+:root{
+    --Brightorange: hsl(31, 77%, 52%);
+--Darkcyan: hsl(184, 100%, 22%);
+--Verydarkcyan: hsl(179, 100%, 13%);
+
+--Transparentwhiteparagraphs: hsla(0, 0%, 100%, 0.75);
+--Verylightgray: hsl(0, 0%, 95%);
+}
+.ff{
+    font-family: 'Big Shoulders Display', cursive;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.content{
+    padding: 1rem;
+    display: grid;
+    
+    max-width: 400px;
+}
+
+.contents{
+    display: grid;
+    padding: 1rem;
+    gap: 1rem;
+
+    
+}
+
+.contents:nth-child(1){
+    background-color: var(--Brightorange);
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+
+img{
+    width: 100%;
+    display: block;
+}
+
+.img{
+    padding-top: 1rem;
+    width: 50px;
+    height: 50px;
+}
+
+.contents:nth-child(1) h2{
+    color: var(--Verylightgray);
+    font-family: 'Big Shoulders Display', cursive;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+}
+
+.contents:nth-child(1) p{
+    color: var(--Transparentwhiteparagraphs);
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 0.7rem;
+}
+
+.contents:nth-child(2){
+    background-color: var(--Darkcyan);
+}
+
+.contents:nth-child(2) h2{
+    color: var(--Verylightgray);
+    font-family: 'Big Shoulders Display', cursive;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+}
+.contents:nth-child(2) p{
+    color: var(--Transparentwhiteparagraphs);
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 0.7rem;
+}
+.contents:nth-child(3){
+    background-color: var(--Verydarkcyan);
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+
+.contents:nth-child(3) h2{
+    color: var(--Verylightgray);
+    font-family: 'Big Shoulders Display', cursive;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+}
+
+.contents:nth-child(3) p{
+    color: var(--Transparentwhiteparagraphs);
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 0.7rem;
+}
+
+.contents{
+    
+    display: grid;
+    gap: 1rem;
+}
+
+.btn{
+    background-color: var(--Verylightgray);
+    padding: 0.5rem 0;
+    width: 55%;
+    border-radius: 1rem;
+    cursor: pointer;
+    outline: none;
+    border: 1px solid transparent;
+
+    margin-bottom: 1rem;
+    transition: color 0.5s,background-color 0.5s, border 0.5s, width 0.5s,transform 0.5s;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 0.7rem;
+}
+
+.color1{
+    color: var(--Brightorange);
+}
+
+.color1:hover{
+    color: var(--Verylightgray);
+    background-color: var(--Brightorange);
+    border: 1px solid var(--Verylightgray);
+    width: 60%;
+}
+.color1:active{
+    transform: scale(0.9);
+}
+
+
+.color2{
+    color: var(--Darkcyan);
+}
+.color2:hover{
+    color: var(--Verylightgray);
+    background-color: var(--Darkcyan);
+    border: 1px solid var(--Verylightgray);
+    width: 60%;
+}
+.color2:active{
+    transform: scale(0.9);
+}
+
+.color3{
+    color: var(--Verydarkcyan);
+}
+.color3:hover{
+    color: var(--Verylightgray);
+    background-color: var(--Verydarkcyan);
+    border: 1px solid var(--Verylightgray);
+    width: 60%;
+    
+}
+.color3:active{
+    transform: scale(0.9);
+}
+
+
+@media (min-width: 800px) {
+    
+    .content{
+        grid-template-columns: 1fr 1fr 1fr;
+        place-items: center;
+        max-width: 700px;
+    }
+
+    .contents:nth-child(1){
+        background-color: var(--Brightorange);
+        border-top-left-radius: 0.5rem;
+        border-top-right-radius: 0rem;
+        border-bottom-left-radius: 0.5rem;
+    }
+
+    .contents:nth-child(3){
+        border-top-right-radius: 0.5rem;
+        border-bottom-left-radius: 0rem ;
+        border-bottom-right-radius: 0.5rem;
+
+    }
+
+    .contents{
+        min-width: 150px;
+        
+    }
+
+    .contents p{
+        margin-bottom: 2rem;
+    }
+
+    .btn{
+        width: 70%;
+    }
+
+    .color1:hover{
+        color: var(--Verylightgray);
+        background-color: var(--Brightorange);
+        border: 1px solid var(--Verylightgray);
+        width: 75%;
+    }
+    .color1:hover{
+        color: var(--Verylightgray);
+        background-color: var(--Brightorange);
+        border: 1px solid var(--Verylightgray);
+        width: 75%;
+    }
+    .color1:hover{
+        color: var(--Verylightgray);
+        background-color: var(--Brightorange);
+        border: 1px solid var(--Verylightgray);
+        width: 75%;
+    }
+}
